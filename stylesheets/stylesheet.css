@@ -35,6 +35,7 @@ h1 {
   display: block;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
 }
 .option label .mask {
   position: absolute;
@@ -45,13 +46,13 @@ h1 {
   width: 100%;
 }
 .option .mask {
-  background-color: rgba(100, 100, 100, 0.6);
+  background-color: rgba(100, 100, 100, 0.5);
 }
 .option .mask:hover {
-  background-color: rgba(100, 100, 100, 0.3);
+  background-color: rgba(100, 100, 100, 0.2);
 }
 .option input:checked + .mask {
-  background-color: rgba(100, 100, 100, 0.1);
+  background-color: rgba(100, 100, 100, 0.05);
 }
 .option input:checked + .mask:hover {
   background-color: rgba(0, 0, 0, 0);
@@ -90,4 +91,34 @@ h1 {
   height: 20px;
   padding-top: 15px;
   vertical-align: text-bottom;
+}
+
+.buttons:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+}
+button {
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: #dddddd;
+  border: none;
+  display: block;
+  box-sizing: content-box;
+  float: left;
+  width: 31%;
+  margin: 10px 1%;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #aaaaaa;
 }

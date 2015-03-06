@@ -42,12 +42,12 @@ var categories = {
 			color: "#642FE8",
 			tagline: "Mental damage, the type most people seem to have sustained already"
 		},
-		Radiant: {
+		radiant: {
 			description: "Radiant",
 			color: "#FFE613",
 			tagline: "Spirit power, divine power, rightuous pain"
 		},
-		Thunder: {
+		thunder: {
 			description: "Thunder",
 			color: "#ffffff",
 			tagline: "Some kind of sound damge, I guess? What is this, really?!"
