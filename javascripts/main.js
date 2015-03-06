@@ -34,8 +34,38 @@ $(document).ready(function() {
 			associatedCrits = getAssociatedItems(crits, []);
 
 		var randomCrit = associatedCrits[Math.floor(Math.random() * associatedCrits.length)];
-		console.log(randomCrit);
+		displayResult(randomCrit);
 	});
+	
+	$("button.fumble").click(function() {
+		var associations = getAssociations();
+
+		var associatedFumbles = getAssociatedItems(fumbles, associations);
+		if(!associatedFumbles || !associatedFumbles.length)
+			associatedFumbles = getAssociatedItems(fumbles, []);
+
+		var randomFumble = associatedFumbles[Math.floor(Math.random() * associatedFumbles.length)];
+		displayResult(randomFumble);
+	});
+
+	$("button.reset").click(function() {
+		$(".option :checked").prop("checked", false);
+		displayResult(null);
+	});
+
+	function displayResult(result) {
+		if(!result) {
+			$(".result").children(".title, .flavor, .effect, .severity").text("");
+			$(".result .brutality").removeClass("b1 b2 b3 b4 b5");
+			return;
+		}
+		$(".result .title").text(result.title);
+		$(".result .flavor").text(result.flavor);
+		$(".result .effect").text(result.effect);
+		$(".result .brutality").text(result.brutality)
+		$(".result .brutality").removeClass("b1 b2 b3 b4 b5").addClass("b" + result.brutality);
+		$("html, body").animate({ scrollTop: $(document).height() }, "fast");
+	}
 
 	function getAssociations() {		
 		var associations = [];		

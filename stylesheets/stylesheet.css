@@ -2,13 +2,12 @@ div, section, h1, h2, h3, p, span, label {
   margin: 0;
   padding: 0;
   font-family: helvetica;
+  font-weight: normal;
 }
 
 
 body {
   background-color: #fff;
-}
-h1 {
 }
 .centerbody {
     max-width: 800px;
@@ -121,4 +120,56 @@ button {
 }
 button:hover {
   background-color: #aaaaaa;
+}
+.result {
+    margin-top: 10px;
+    background-color: #eee;
+    padding: 10px;
+    min-height: 120px;
+    border-radius: 5px;
+    position: relative;
+}
+.result h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+.result p {
+  font-size: 20px;
+}
+.result .flavor {
+  margin-bottom: 15px;
+  font-style: italic;
+}
+.result .effect {
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+.result .brutality {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+.result .brutality.b1 {
+  color: #080;
+}
+.result .brutality.b2 {
+  color: #880;
+}
+.result .brutality.b3 {
+  color: #d70;
+}
+.result .brutality.b4 {
+  color: #e50;
+}
+.result .brutality.b5 {
+  color: #f00;
 }
