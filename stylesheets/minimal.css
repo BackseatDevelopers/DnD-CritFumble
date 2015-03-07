@@ -27,3 +27,22 @@
 .categories {
   margin-bottom: 10px;
 }
+.option label {
+  overflow: visible;
+}
+.option .mask {
+  background-color: transparent;
+  box-shadow: 0 0 0 2px #aaa;
+}
+.option .mask:hover {
+  background-color: transparent;
+  box-shadow: 0 0 0 5px #aaa;
+}
+.option input:checked + .mask {
+  background-color: transparent;
+  box-shadow: 0 0 0 2px #444;
+}
+.option input:checked + .mask:hover {
+  background-color: transparent;
+  box-shadow: 0 0 0 5px #444;
+}
