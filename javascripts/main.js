@@ -2,7 +2,8 @@ $(document).ready(function() {
 	var categoryTemplate = $(".category.template").clone().removeClass("template");
 	var optionTemplate = $(".option.template").clone().removeClass("template");
 
-	var categoryContainer = $(".categories");
+	var offscreenCanvas = $(".offscreen-canvas");
+	var categoryContainer = $(".category-container");
 	for(var categoryName in categories) {
 		var category = categories[categoryName];
 
@@ -11,7 +12,7 @@ $(document).ready(function() {
 		categoryElement.data("name", categoryName);
 		categoryElement.appendTo(categoryContainer);
 
-		var optionContainer = categoryElement.find(".options");
+		var optionContainer = categoryElement.find(".option-container");
 		for(var optionName in category) {
 			if(optionName === "description" || optionName ==="color")
 				continue;
@@ -19,9 +20,17 @@ $(document).ready(function() {
 
 			var optionElement = optionTemplate.clone();
 			optionElement.find(".description").text(option.description);
-			optionElement.find(".tagline").text(option.tagline);
-			optionElement.css("background-color", option.color);
+			optionElement.find(".tagline").text(option.tagline);	
 			optionElement.data("name", optionName);
+
+			(function(innerOption, innerOptionElemnt) {
+				var maskImage = new Image();
+				maskImage.onload = function() {
+					innerOptionElemnt.find(".icon").attr("src", renderMask(maskImage, innerOption.color)).attr("title", innerOption.description);
+				}
+				maskImage.src = "images/" + option.icon;
+			})(option, optionElement);
+
 			optionElement.appendTo(optionContainer);
 		}
 	}
@@ -107,5 +116,27 @@ $(document).ready(function() {
 			}
 		}
 		return associatedItems;
+	}
+
+	function renderMask(mask, foregroundColor)
+	{
+		var htmlCanvas = offscreenCanvas[0];
+		htmlCanvas.height = mask.height;
+		htmlCanvas.width = mask.width;
+
+		var ctx = htmlCanvas.getContext("2d");
+		ctx.clearRect ( 0 , 0 , htmlCanvas.width, htmlCanvas.height );
+
+		var composition = ctx.globalCompositeOperation;
+
+		ctx.globalCompositeOperation = "source-over";
+		ctx.drawImage(mask, 0, 0);
+		ctx.globalCompositeOperation = "source-in";
+		ctx.fillStyle = foregroundColor;
+		ctx.fillRect(0, 0, mask.width, mask.height);
+		
+		ctx.globalCompositeOperation = composition;
+
+		return htmlCanvas.toDataURL();
 	}
 });

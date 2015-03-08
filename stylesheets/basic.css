@@ -34,7 +34,6 @@ body {
   display: block;
   position: relative;
   cursor: pointer;
-  overflow: hidden;
 }
 .option label .mask {
   position: absolute;
@@ -113,7 +112,7 @@ button {
   box-sizing: content-box;
   float: left;
   width: 31%;
-  margin: 10px 1%;
+  margin: 0 1%;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bold;
@@ -172,4 +171,10 @@ button:hover {
 }
 .result .brutality.b5 {
   color: #f00;
+}
+
+.offscreen-canvas {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
 }

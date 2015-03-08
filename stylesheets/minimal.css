@@ -3,8 +3,10 @@
 }
 .options {
   border-bottom: 2px solid #ccc;
-  margin: 0 0 -10px -10px;
   padding-bottom: 10px;
+}
+.option-container {  
+  margin: 0 0 -10px -10px;
 }
 .options:after {  
   content: "";
@@ -31,15 +33,19 @@
   margin-bottom: 10px;
 }
 .option label {
-  overflow: visible;
+  mask-type: luminance;
+  mask-repeat: space;
+}
+.option label img {
+  padding: 6px;
 }
 .option .mask {
   background-color: transparent;
-  box-shadow: 0 0 0 2px #aaa;
+  box-shadow: 0 0 0 2px #ccc;
 }
 .option .mask:hover {
   background-color: transparent;
-  box-shadow: 0 0 0 5px #aaa;
+  box-shadow: 0 0 0 5px #ccc;
 }
 .option input:checked + .mask {
   background-color: transparent;
