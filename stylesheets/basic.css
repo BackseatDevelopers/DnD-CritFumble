@@ -138,10 +138,9 @@ button:hover {
 .result .flavor {
   margin-bottom: 15px;
   font-style: italic;
+  line-height: 20px;
 }
 .result .effect {
-  text-transform: lowercase;
-  font-variant: small-caps;
 }
 .result .brutality {
   position: absolute;

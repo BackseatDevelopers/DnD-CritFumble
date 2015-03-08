@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	linkCategories();
+
 	var categoryTemplate = $(".category.template").clone().removeClass("template");
 	var optionTemplate = $(".option.template").clone().removeClass("template");
 
@@ -14,7 +16,7 @@ $(document).ready(function() {
 
 		var optionContainer = categoryElement.find(".option-container");
 		for(var optionName in category) {
-			if(optionName === "description" || optionName ==="color")
+			if(optionName === "description" || optionName === "color" || optionName === "name")
 				continue;
 			var option = category[optionName];
 
@@ -62,16 +64,28 @@ $(document).ready(function() {
 		displayResult(null);
 	});
 
+	function linkCategories() {
+		for(var categoryName in categories) {
+			var category = categories[categoryName];
+			category.name = categoryName;
+			for(var optionName in category) {
+				var option = category[optionName];
+				option.name = optionName;
+				option.category = category;
+			}
+		}
+	}
+
 	function displayResult(result) {
 		if(!result) {
 			$(".result").children(".title, .flavor, .effect, .severity").text("");
 			$(".result .brutality").removeClass("b1 b2 b3 b4 b5");
 			return;
 		}
-		$(".result .title").text(result.title);
-		$(".result .flavor").text(result.flavor);
-		$(".result .effect").text(result.effect);
-		$(".result .brutality").text(result.brutality)
+		$(".result .title").html(result.title);
+		$(".result .flavor").html(result.flavor);
+		$(".result .effect").html(result.effect);
+		$(".result .brutality").html(result.brutality)
 		$(".result .brutality").removeClass("b1 b2 b3 b4 b5").addClass("b" + result.brutality);
 		$("html, body").animate({ scrollTop: $(document).height() }, "fast");
 	}
@@ -82,7 +96,7 @@ $(document).ready(function() {
 
 		for(categoryName in categories) {
 			var category = categories[categoryName];
-			
+
 			checkedOptions.each(function() {
 				var checkedOption = $(this);
 				if(checkedOption.parents(".category").data("name") === categoryName) {
@@ -95,25 +109,43 @@ $(document).ready(function() {
 		return associations;
 	}
 
-	function getAssociatedItems(sourceItems, soughtAssociations) {
+	function getAssociatedItems(sourceItems, availableAssociations) {
 		var associatedItems = [];
 		for(var i = 0; i < sourceItems.length; i++) {
 			var sourceItem = sourceItems[i];
-			if(!sourceItem.associations)
+			if(!sourceItem.associations) {
 				associatedItems.push(sourceItem);
+				break;
+			}
+
+			var	sourceItemCategorySatisfaction = {};
 			
 			for(var j = 0; j < sourceItem.associations.length; j++) {
 				var sourceItemAssociation = sourceItem.associations[j];
-				
-				for(var k = 0; k < soughtAssociations.length; k++) {
-					var soughtAssociation = soughtAssociations[k];
 
-					// the more associated an item is, the more times it gets added
-					// thus it has a higher chance of getting chosen (which is good)
-					if(soughtAssociation === sourceItemAssociation)
-						associatedItems.push(sourceItem);
+				if(!sourceItemCategorySatisfaction[sourceItemAssociation.category.name]) {
+					sourceItemCategorySatisfaction[sourceItemAssociation.category.name] = 0;
+				}
+
+				for(var k = 0; k < availableAssociations.length; k++) {
+					var availableAssociation = availableAssociations[k];
+					if(sourceItemAssociation === availableAssociation) {
+						sourceItemCategorySatisfaction[sourceItemAssociation.category.name]++;
+					}
 				}
 			}
+
+			var sourceItemCategoriesAreAllSatisfied = true;
+			for(var sourceItemCategoryName in sourceItemCategorySatisfaction) {			
+				if(sourceItemCategorySatisfaction[sourceItemCategoryName] === 0) {
+					sourceItemCategoriesAreAllSatisfied = false;
+					break;
+				}
+			}
+
+			if(sourceItemCategoriesAreAllSatisfied)
+				associatedItems.push(sourceItem);
+
 		}
 		return associatedItems;
 	}
