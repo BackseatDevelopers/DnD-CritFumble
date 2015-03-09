@@ -96,5 +96,61 @@ var crits = [
 		associations: [ categories.damageTypes.psychic ],
 		flavor: 'You invide the target\'s mind, demoralizing it and making it doubt its actions.',
 		effect: 'You roll full damage twice and use the best result. Until the end of this encounter, every time the target wants to make an attack, it has to make a DC15 will save before attacking. If it fails, the attack doesn\'t happen'
+	},
+	{
+		title: 'Corrosion',
+		brutality: 2,
+		associations: [ categories.damageTypes.acid ],
+		flavor: 'Your acid is strong and bites deep into the enemy\'s armor, hurting it and making it vulnerable.',
+		effect: 'You roll full damage twice and use the best result. Until the end of this encounter, the target takes a -2 penalty to AC and it has disadvantage on all saving throws.'
+	},
+	{
+		title: 'Brain Freeze',
+		brutality: 2,
+		associations: [ categories.damageTypes.cold ],
+		flavor: 'Your cold bites at the enemy, making it difficult for them to think clearly.',
+		effect: 'You roll full damage twice and use the best result. Until the end of this encounter, the enemy takes a -1 to speed, and a -3 to dexterity and intelligence (stats, not mods).'
+	},
+	{
+		title: 'Force - A - Nature',
+		brutality: 3,
+		associations: [ categories.damageTypes.force ],
+		flavor: 'The target is overwhelmed by your tremendous show of force, taking damage and flying backwards.',
+		effect: 'You roll full damage twice and <strong>add up the results (add modifiers only once)</strong>. The target is pushed one square.'
+	},
+	{
+		title: 'A shocking experience',
+		brutality: 3,
+		associations: [ categories.damageTypes.lightning ],
+		flavor: 'Your lightning sends a loud sound crackling through the air, leaving everyone motionless for a split second. The target is taken by surprise.',
+		effect: 'You roll full damage twice and use the best result. The target is stunned for one round.'
+	},
+	{
+		title: 'Necrofester',
+		brutality: 3,
+		associations: [ categories.damageTypes.necrotic ],
+		flavor: 'The necrotic damage leaves a lingering scar on the target. The stains fester and boil.',
+		effect: 'You roll full damage twice and use the best result. Until the end of the encounter, the target takes ongoing damage necrotic 1. The target gains vulnerable 2 necrotic.'
+	},
+	{
+		title: 'Paralyzing Venom',
+		brutality: 4,
+		associations: [ categories.damageTypes.poison ],
+		flavor: 'The poison attack infests the target on the inside, making it nauseous and weak. It can feel its power being sapped from the inside.',
+		effect: 'You roll full damage twice and use the best result. The target must make a DC18 constitution saving throw or be paralyzed for one round.'
+	},
+	{
+		title: 'Radiance',
+		brutality: 3,
+		associations: [ categories.damageTypes.radiant ],
+		flavor: 'You strike out defiantly at your enemies with the power of radiance. It shines so bright that some of it lingers long after your spell.',
+		effect: 'You roll full damage twice and use the best result. Until the end of the encounter, any enemy starting its turn within 15ft of you takes 5 radiant damage. Also, for the next hour, anything within 50ft is lit up as if by a torch.'
+	},
+	{
+		title: 'Thundering echo',
+		brutality: 2,
+		associations: [ categories.damageTypes.thunder ],
+		flavor: 'Your thunder leaves the enemy confused and disoriented, and that\'s not even the worst of it!',
+		effect: 'You roll full damage twice and use the best result. The target is deafened. Until the end of the encounter, whenever any thunder ability is used or activated, the target takes 2 damage.'
 	}
 ]
