@@ -42,7 +42,7 @@ var crits = [
 		effect: 'Your spell deals damage as normal. Choose one target hit by your current spell. Everything in a sphere 1 around the target is automatically hit (again) by your spell.'
 	},
 	{
-		title: 'Intense focus',
+		title: 'Intense Focus',
 		brutality: 3,
 		associations: [],
 		flavor: 'You focus intently on your attack, bringing forth the best you could while ignoring any distractions around you.',
@@ -61,5 +61,40 @@ var crits = [
 		associations: [ categories.attackTypes.rangedSpellSingle, categories.attackTypes.rangedSpellMulti, categories.attackTypes.meleeSpell, categories.attackTypes.rangedSpellArea ],
 		flavor: 'The flow of battle inspires you to greatness. You are able to effortlessly cast your greatest spells.',
 		effect: 'Your spell deals damage as normal. Roll a d10. Until the end of this encounter, you are able to cast a spell of that level or lower, for which you have a spell slot, without expending the slot (even if you have already expended that slot).'
+	},
+	{
+		title: 'Empowering Upgrade',
+		brutality: 2,
+		associations: [ categories.attackTypes.rangedSpellSingle, categories.attackTypes.rangedSpellMulti, categories.attackTypes.meleeSpell, categories.attackTypes.rangedSpellArea ],
+		flavor: 'You sense an unexpected surge of power, and attempt to direct it into the spell you are casting.',
+		effect: 'You roll full damage twice and use the best result. If the spell is capable of being cast from a higher spell slot, you may upgrade your spell one level without having or expending this slot. Otherwise, Add 1d6 damage per plus.'
+	},
+	{
+		title: 'Arcane Precision',
+		brutality: 2,
+		associations: [ categories.attackTypes.rangedSpellMulti, categories.attackTypes.rangedSpellArea ],
+		flavor: 'You cast your spell perfectly and with ease, leaving your enemies wondering what happened.',
+		effect: 'You roll full damage twice and use the best result for your current target. You automatically hit all other targets.'
+	},
+	{
+		title: 'Explodination',
+		brutality: 2,
+		associations: [ categories.attackTypes.rangedSpellArea ],
+		flavor: 'With great focus, skill, and precision, you are able to expand your spell\'s range beyond the norm.',
+		effect: 'You roll full damage twice and use the best result for your current target. Choose up to one dimension of your spell\'s area. You may increase it to up to twice its original value.'
+	},
+	{
+		title: 'Lord of the flames',
+		brutality: 2,
+		associations: [ categories.damageTypes.fire ],
+		flavor: 'You demonstrate great skill with fire, striking fear into the hearts of all who see it.',
+		effect: 'You roll full damage twice and use the best result. Until the end of this encounter, whenever you <strong>target</strong> someone with a fire attack, You may try to intimidate them with advantage as a free action, causing fear on success.'
+	},
+	{
+		title: 'Trauma',
+		brutality: 2,
+		associations: [ categories.damageTypes.psychic ],
+		flavor: 'You invide the target\'s mind, demoralizing it and making it doubt its actions.',
+		effect: 'You roll full damage twice and use the best result. Until the end of this encounter, every time the target wants to make an attack, it has to make a DC15 will save before attacking. If it fails, the attack doesn\'t happen'
 	}
 ]
