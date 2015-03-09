@@ -170,14 +170,14 @@ var crits = [
 	{
 		title: 'Brutal Strike',
 		brutality: 3,
-		associations: [ categories.attackTypes.meleeMediumBlades ],
+		associations: [ categories.attackTypes.meleeHeavyWeapons ],
 		flavor: 'Your strike out with the rage of a bear, putting all of your weight into your strike and landing a blow of great impact.',
 		effect: 'You roll full damage twice and use the best result. You may move the target up to one square in any direction, provoking opportunity attacks as normal except from you.'
 	},
 	{
 		title: 'Whirling Cleave',
 		brutality: 3,
-		associations: [ categories.attackTypes.meleeMediumBlades ],
+		associations: [ categories.attackTypes.meleeLongWeapons ],
 		flavor: 'Your strike slices through the target with great ease, allowing you to pivot and spin.',
 		effect: 'You roll full damage twice and use the best result. All other targets in range of your weapon take half as much damage.'
 	}
