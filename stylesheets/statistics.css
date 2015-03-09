@@ -1,3 +1,23 @@
+div, section, h1, h2, h3, p, span, label {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica;
+  font-weight: normal;
+}
+
+
+body {
+  background-color: #fff;
+}
+.centerbody {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.template {
+  display: none;
+}
+
 .category {
 
 }
@@ -80,7 +100,7 @@
   margin: 0;
   padding: 0;
 }
-.buttons button {
+button {
   height: 20px;
   line-height: 20px;
   font-size: 16px;
@@ -97,7 +117,7 @@
   text-transform: uppercase;
   font-weight: bold;
 }
-.buttons button:hover {
+button:hover {
   background-color: #aaaaaa;
 }
 .result {
@@ -150,4 +170,10 @@
 }
 .result .brutality.b5 {
   color: #f00;
+}
+
+.offscreen-canvas {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
 }
