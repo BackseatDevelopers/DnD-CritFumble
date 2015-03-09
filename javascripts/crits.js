@@ -147,10 +147,38 @@ var crits = [
 		effect: 'You roll full damage twice and use the best result. Until the end of the encounter, any enemy starting its turn within 15ft of you takes 5 radiant damage. Also, for the next hour, anything within 50ft is lit up as if by a torch.'
 	},
 	{
-		title: 'Thundering echo',
+		title: 'Thundering Echo',
 		brutality: 2,
 		associations: [ categories.damageTypes.thunder ],
 		flavor: 'Your thunder leaves the enemy confused and disoriented, and that\'s not even the worst of it!',
 		effect: 'You roll full damage twice and use the best result. The target is deafened. Until the end of the encounter, whenever any thunder ability is used or activated, the target takes 2 damage.'
+	},
+	{
+		title: 'Soft Spot',
+		brutality: 2,
+		associations: [ categories.attackTypes.meleeFineBlades ],
+		flavor: 'You aim for the soft spot and cut through your target like butter, finishing off with a nasty twist of your blade, just before you pull it out.',
+		effect: 'You roll full damage twice and use the best result. Add 2d4 for the twist.'
+	},
+	{
+		title: 'Savage Strike',
+		brutality: 3,
+		associations: [ categories.attackTypes.meleeMediumBlades ],
+		flavor: 'Your strike out with great strength, cutting deep into the body of your target..',
+		effect: 'You roll full damage twice and use the best result. If the target has blood, it bleeds for 2d4 ongoing damage at the start of its turn (medicine check DC20 ends).'
+	},
+	{
+		title: 'Brutal Strike',
+		brutality: 3,
+		associations: [ categories.attackTypes.meleeMediumBlades ],
+		flavor: 'Your strike out with the rage of a bear, putting all of your weight into your strike and landing a blow of great impact.',
+		effect: 'You roll full damage twice and use the best result. You may move the target up to one square in any direction, provoking opportunity attacks as normal except from you.'
+	},
+	{
+		title: 'Whirling Cleave',
+		brutality: 3,
+		associations: [ categories.attackTypes.meleeMediumBlades ],
+		flavor: 'Your strike slices through the target with great ease, allowing you to pivot and spin.',
+		effect: 'You roll full damage twice and use the best result. All other targets in range of your weapon take half as much damage.'
 	}
 ]
