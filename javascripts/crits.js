@@ -39,7 +39,7 @@ var crits = [
 		brutality: 4,
 		associations: [ categories.attackTypes.rangedSpellSingle, categories.attackTypes.rangedSpellMulti, categories.attackTypes.meleeSpell, categories.attackTypes.rangedSpellArea ],
 		flavor: 'Feeling confident, you decide to warp the very fabric of your spell to become even stronger, enlarging it beyond its normal capacity.',
-		effect: 'Your spell deals damage as normal. Choose one target hit by your current spell. Everything in a sphere 1 around the target is automatically hit (again) by your spell.'
+		effect: 'Your spell deals damage as normal. Choose one target hit by your current spell. All enemies in a sphere 1 around the target are automatically hit (again) by your spell.'
 	},
 	{
 		title: 'Intense Focus',
@@ -86,42 +86,42 @@ var crits = [
 	{
 		title: 'Alchemical Sniper',
 		brutality: 2,
-		associations: [ categories.attackTypes.acid ],
+		associations: [ categories.damageTypes.acid ],
 		flavor: 'You are the master of targeting. Even limbs are not a problem for you. In this case, you make the target dance so fiercely Michael Jackson himself turns over in his grave.',
 		effect: 'You roll full damage twice and use the best result. The target must either move one square (provoking opportunity attacks) or take an additional 2d6 acid damage.'
 	},
 	{
 		title: 'Acid Fountain',
 		brutality: 2,
-		associations: [ categories.attackTypes.acid ],
+		associations: [ categories.damageTypes.acid ],
 		flavor: 'Upon striking your target, your acid is sprayed all over the enemies behind them.',
 		effect: 'You roll full damage twice and use the best result. All enemies in a cone 5 behind the original take 1d4 acid damage.'
 	},
 	{
 		title: 'Ice Mastery',
 		brutality: 3,
-		associations: [ categories.attackTypes.cold ],
+		associations: [ categories.damageTypes.cold ],
 		flavor: 'You manage to get that little extra out of your attack, pestering your target even more than you already should have.',
-		effect: 'You roll full damage twice and use the best result. Alle nemies in a sphere 1 centered on the target are slowed for one round. Gain +2 damage for all cold spells until the end of this encounter.'
+		effect: 'You roll full damage twice and use the best result. All nemies in a sphere 1 centered on the target are slowed for one round. Gain +2 damage for all cold spells until the end of this encounter.'
 	},
 	{
 		title: 'Frostburn',
 		brutality: 5,
-		associations: [ categories.attackTypes.cold ],
+		associations: [ categories.damageTypes.cold ],
 		flavor: 'Somehow, your target really pissed you off. You decide treat your enemy to a taste of your versatility.',
 		effect: 'You roll full damage twice and use the best result. You may cast any fire-based attack or spell at your disposal on the target as a free action.'
 	},
 	{
 		title: 'Divine Roasting',
 		brutality: 4,
-		associations: [ categories.attackTypes.fire ],
+		associations: [ categories.damageTypes.fire ],
 		flavor: 'Your skills have curried the favor of divine onlookers and they lend you their help.',
 		effect: 'You roll full damage twice and use the best result. The target takes ongoing damage 3 (fire) and every time it does, you are healed for 3 hit points.'
 	},
 	{
 		title: 'Immolation',
 		brutality: 5,
-		associations: [ categories.attackTypes.fire ],
+		associations: [ categories.damageTypes.fire ],
 		flavor: 'Mastery of fire isn\'t easy, but from time to time, inspiration bubbles up and you want to test it immediately, this is such time.',
 		effect: 'You roll full damage twice and use the best result. For one round, the target is affected by immolation, which deals 5 ongoing fire damage to it, and to all enemies adjacent to it. You can sustain this effect as a bonus action.'
 	},
@@ -229,5 +229,48 @@ var crits = [
 		associations: [ categories.attackTypes.meleeUnarmed ],
 		flavor: 'You flex all your muscles, putting all your weight into quick and deadly blow to the target and strengthening your overall physique.',
 		effect: 'You roll full damage twice and use the best result. Increase your strength or dexterity modifier by 1 until the end of the encounter.'
+	},
+	{
+		title: 'Lady Luck',
+		brutality: 2,
+		associations: [],
+		flavor: 'Lady Luck smiles and frowns upon you at the same time. She steals your luck today, but gives it back with intrest.',
+		effect: '<strong>You deal damage as normal.</strong> The next time a monster would crit you, it fumbles instead, or the next time you would fumble, you crit instead (which ever happens first).'
+	},
+	{
+		title: 'Arcane Resourcefulness',
+		brutality: 1,
+		associations: [ categories.damageTypes.force ],
+		flavor: 'You have the knowledge of magic at your disposal. Your innate talent allows you to spice things up a little and create new things.',
+		effect: 'You roll full damage twice and use the best result. You may change your spell to include any damage types of your choice.'
+	},
+	{
+		title: 'Arcane Resourcefulness',
+		brutality: 1,
+		associations: [ categories.damageTypes.force ],
+		flavor: 'You have the knowledge of magic at your disposal. Your innate talent allows you to spice things up a little and create new things.',
+		effect: 'You roll full damage twice and use the best result. You may change your damage types of your choice.'
+	},
+	{
+		title: 'The great wall',
+		brutality: 4,
+		associations: [ categories.damageTypes.force ],
+		flavor: 'You manage to use the remnant power from your spell to create an interesting effect.',
+		effect: 'You roll full damage twice and use the best result. The target\'s space and up to two adjacent unoccupied tiles become transculent walls which enemies cannot traverse, but allies can move through freely. These walls give partial cover to allies.'
+	},
+	{
+		title: 'Soul Syphon',
+		brutality: 4,
+		associations: [ categories.attackTypes.meleeSpell ],
+		flavor: 'When you touch the target to cast your spell upon them, you drain the target\'s very soul.',
+		effect: 'You roll full damage twice and use the best result. If the target is a spellcaster, it is unable to focus or cast spells for 1d4 rounds. Otherwise, they take an additional 2d6 spirit damage.'
+	},
+	{
+		title: 'Fully Charged',
+		brutality: 3,
+		associations: [ categories.damageTypes.lightning ],
+		flavor: 'Somehow the enemy acts like a battery, a little extra juice might do something interesting.',
+		effect: 'You roll full damage twice and use the best result. The next time the target is hit by a Lightning attack he explodes doing 2d6 damage in a Circle 1 centered on him.'
+'
 	}
 ];
