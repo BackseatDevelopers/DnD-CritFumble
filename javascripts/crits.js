@@ -84,6 +84,48 @@ var crits = [
 		effect: 'You roll full damage twice and use the best result for your current target. Choose up to one dimension of your spell\'s area. You may increase it to up to twice its original value.'
 	},
 	{
+		title: 'Alchemical Sniper',
+		brutality: 2,
+		associations: [ categories.attackTypes.acid ],
+		flavor: 'You are the master of targeting. Even limbs are not a problem for you. In this case, you make the target dance so fiercely Michael Jackson himself turns over in his grave.',
+		effect: 'You roll full damage twice and use the best result. The target must either move one square (provoking opportunity attacks) or take an additional 2d6 acid damage.'
+	},
+	{
+		title: 'Acid Fountain',
+		brutality: 2,
+		associations: [ categories.attackTypes.acid ],
+		flavor: 'Upon striking your target, your acid is sprayed all over the enemies behind them.',
+		effect: 'You roll full damage twice and use the best result. All enemies in a cone 5 behind the original take 1d4 acid damage.'
+	},
+	{
+		title: 'Ice Mastery',
+		brutality: 3,
+		associations: [ categories.attackTypes.cold ],
+		flavor: 'You manage to get that little extra out of your attack, pestering your target even more than you already should have.',
+		effect: 'You roll full damage twice and use the best result. Alle nemies in a sphere 1 centered on the target are slowed for one round. Gain +2 damage for all cold spells until the end of this encounter.'
+	},
+	{
+		title: 'Frostburn',
+		brutality: 5,
+		associations: [ categories.attackTypes.cold ],
+		flavor: 'Somehow, your target really pissed you off. You decide treat your enemy to a taste of your versatility.',
+		effect: 'You roll full damage twice and use the best result. You may cast any fire-based attack or spell at your disposal on the target as a free action.'
+	},
+	{
+		title: 'Divine Roasting',
+		brutality: 4,
+		associations: [ categories.attackTypes.fire ],
+		flavor: 'Your skills have curried the favor of divine onlookers and they lend you their help.',
+		effect: 'You roll full damage twice and use the best result. The target takes ongoing damage 3 (fire) and every time it does, you are healed for 3 hit points.'
+	},
+	{
+		title: 'Immolation',
+		brutality: 5,
+		associations: [ categories.attackTypes.fire ],
+		flavor: 'Mastery of fire isn\'t easy, but from time to time, inspiration bubbles up and you want to test it immediately, this is such time.',
+		effect: 'You roll full damage twice and use the best result. For one round, the target is affected by immolation, which deals 5 ongoing fire damage to it, and to all enemies adjacent to it. You can sustain this effect as a bonus action.'
+	},
+	{
 		title: 'Lord of the flames',
 		brutality: 2,
 		associations: [ categories.damageTypes.fire ],
@@ -180,5 +222,12 @@ var crits = [
 		associations: [ categories.attackTypes.meleeLongWeapons ],
 		flavor: 'Your strike slices through the target with great ease, allowing you to pivot and spin.',
 		effect: 'You roll full damage twice and use the best result. All other targets in range of your weapon take half as much damage.'
+	},
+	{
+		title: 'Body of Steel',
+		brutality: 3,
+		associations: [ categories.attackTypes.meleeUnarmed ],
+		flavor: 'You flex all your muscles, putting all your weight into quick and deadly blow to the target and strengthening your overall physique.',
+		effect: 'You roll full damage twice and use the best result. Increase your strength or dexterity modifier by 1 until the end of the encounter.'
 	}
-]
+];
