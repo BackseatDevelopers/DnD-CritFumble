@@ -271,5 +271,33 @@ var crits = [
 		associations: [ categories.damageTypes.lightning ],
 		flavor: 'Somehow the enemy acts like a battery, a little extra juice might do something interesting.',
 		effect: 'You roll full damage twice and use the best result. The next time the target is hit by a Lightning attack he explodes doing 2d6 damage to all enemies in a Circle 1 centered on them.'
+	},
+	{
+		title: 'Improvisation',
+		brutality: 3,
+		associations: [ categories.attackTypes.meleeImprovised ],
+		flavor: 'Bonus points for improvisation to you, good sir!',
+		effect: 'Instead of 1d4, roll 3d20 for damage.'
+	},
+	{
+		title: 'Not the knee!',
+		brutality: 2,
+		associations: [ categories.attackTypes.rangedThrown ],
+		flavor: 'You throw your weapon straight into their kneecap, hampering their movement and hurting them like hell!',
+		effect: 'You roll full damage twice and use the best result. The target has its speed reduced by half.'
+	},
+	{
+		title: 'Mammonite',
+		brutality: 5,
+		associations: [ categories.attackTypes.rangedSling ],
+		flavor: '&quot;Fuck it&quot;',
+		effect: 'You roll full damage twice and use the best result. You can spend up to 50gp on this attack. For each 5gp you spend, add 1d8 to the damage (roll these only once).'
+	},
+	{
+		title: 'Cupid',
+		brutality: 2,
+		associations: [ categories.attackTypes.rangedBow ],
+		flavor: 'You fire an arrow straight into the heart of your enemy, causing it to become delusional and fall in love with you.',
+		effect: 'You roll full damage twice and use the best result. The target becomes charmed.'
 	}
 ];
