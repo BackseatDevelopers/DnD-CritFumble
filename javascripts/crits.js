@@ -270,7 +270,6 @@ var crits = [
 		brutality: 3,
 		associations: [ categories.damageTypes.lightning ],
 		flavor: 'Somehow the enemy acts like a battery, a little extra juice might do something interesting.',
-		effect: 'You roll full damage twice and use the best result. The next time the target is hit by a Lightning attack he explodes doing 2d6 damage in a Circle 1 centered on him.'
-'
+		effect: 'You roll full damage twice and use the best result. The next time the target is hit by a Lightning attack he explodes doing 2d6 damage to all enemies in a Circle 1 centered on them.'
 	}
 ];
