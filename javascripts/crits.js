@@ -380,7 +380,7 @@ var crits = [
 	{
 		title: 'Warrior\'s Repose',
 		brutality: 3,
-		associations: [ categories.meleeMediumBlades, categories.meleeHeavyWeapons, categories.meleeLongWeapons, categories.meleeUnarmed ],
+		associations: [ categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeHeavyWeapons, categories.attackTypes.meleeLongWeapons, categories.attackTypes.meleeUnarmed ],
 		flavor: 'You find peace and tranquility in the middle of chaos and destruction.',
 		effect: 'You roll full damage twice and use the best result. You regain the use of one hit die. You may spend it as a free action.'
 	},

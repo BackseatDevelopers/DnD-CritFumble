@@ -38,7 +38,7 @@ var fumbles = [
 		title: 'Cid',
 		brutality: 3,
 		associations: [categories.damageTypes.fire],
-		flavor: '&quot;Hey, Lord of the Flames! - Your tail\'s on fire.',
+		flavor: '&quot;Hey, Lord of the Flames! - Your tail\'s on fire.&quot;',
 		effect: 'Roll damage as normal, your attack hits yourself for half damage. Subsequent targets (if any) are not affected. You take ongoing fire damage 1 at the start of each turn until the end of the encounter, or until you spend a move action to put out the flames. If you take 2 or more damage like this during the encounter, consider your wardrobe ruined.'
 	},
 	{
