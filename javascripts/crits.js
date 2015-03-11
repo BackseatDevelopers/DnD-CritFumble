@@ -299,5 +299,54 @@ var crits = [
 		associations: [ categories.attackTypes.rangedBow ],
 		flavor: 'You fire an arrow straight into the heart of your enemy, causing it to become delusional and fall in love with you.',
 		effect: 'You roll full damage twice and use the best result. The target becomes charmed.'
+	},
+	{
+		title: 'Empowered Explosion',
+		brutality: 1,
+		associations: [ categories.attackTypes.rangedSpellArea ],
+		flavor: 'You draw inspiration from your successes, improving your results across the board.',
+		effect: 'You roll full damage twice and use the best result. All targets hit by this attack take an additional 1d6 damage.'
+	},
+	{
+		title: 'Double Take',
+		brutality: 3,
+		associations: [ categories.attackTypes.rangedSpellMulti ],
+		flavor: 'Your aim is focussed and true. Even when you thought you\'d missed for sure, your projectiles turn around to haunt their targets once again.',
+		effect: 'You roll full damage twice and use the best result. Re-roll any attacks on targets missed by this ability.'
+	},
+	{
+		title: 'Encore',
+		brutality: 3,
+		associations: [ categories.attackTypes.rangedSpellSingle ],
+		flavor: 'You cast your spell brutally and without mercy. Afterwards, you keep the spell clearly in your mind, as if it\'s begging to be cast again.',
+		effect: 'You roll full damage twice and use the best result. During your next turn, you may cast this spell again without spending any spell slots and with advantage.'
+	},
+	{
+		title: 'Blood Magic',
+		brutality: 5,
+		associations: [ categories.attackTypes.rangedSpellArea ],
+		flavor: 'You increase the potency of your spell at the cost of your own well-being, essentially using your personal spirit power to bolster the damage dealt.',
+		effect: 'You roll full damage twice and use the best result. You may expend any amount of hit dice. If you do, roll them and add twice the value to your damage for all targets hit by this spell.'
+	},
+	{
+		title: 'Life Drain',
+		brutality: 2,
+		associations: [ categories.attackTypes.rangedSpellSingle ],
+		flavor: 'Your target\'s pain is your pleasure.',
+		effect: 'You roll full damage twice and use the best result. You regain life equal to half the damage you deal.'
+	},
+	{
+		title: 'Illusory Feint',
+		brutality: 3,
+		associations: [ categories.damageTypes.psychic ],
+		flavor: 'You invade your target\'s mind, muddling their perception and mixing in your illusion.',
+		effect: 'You roll full damage twice and use the best result. You create an illusion in an unoccupied within 5 squares of you. At the start of its turn, the target must make a DC15 wisdom saving throw or be compelled to do anything in its power to attack the illusion until it is dispelled. When the illusion takes damage, it is dispelled.'
+	},
+	{
+		title: 'Magic Conduct',
+		brutality: 2,
+		associations: [ categories.attackTypes.rangedSpellArea ],
+		flavor: 'You leave traces in the stuff of magic, allowing other spells to be easily channeled through them.',
+		effect: 'You roll full damage twice and use the best result. Until the end of the encounter, the area of your spell becomes affected by "Magic Conduct". Anyone inside of this area grants advantage when targeted by a spell, and has a disadvantage on saving throws for spells.'
 	}
 ];
