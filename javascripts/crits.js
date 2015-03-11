@@ -340,7 +340,7 @@ var crits = [
 		brutality: 3,
 		associations: [ categories.damageTypes.psychic ],
 		flavor: 'You invade your target\'s mind, muddling their perception and mixing in your illusion.',
-		effect: 'You roll full damage twice and use the best result. You create an illusion in an unoccupied within 5 squares of you. At the start of its turn, the target must make a DC15 wisdom saving throw or be compelled to do anything in its power to attack the illusion until it is dispelled. When the illusion takes damage, it is dispelled.'
+		effect: 'You roll full damage twice and use the best result. You create an illusion in an unoccupied space within 5 spaces of you. At the start of its turn, the target must make a DC15 wisdom saving throw or be compelled to do anything in its power to attack the illusion until it is dispelled. When the illusion takes damage, it is dispelled. It has your defences and cannot take any actions.'
 	},
 	{
 		title: 'Magic Conduct',
