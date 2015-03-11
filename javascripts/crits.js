@@ -348,5 +348,47 @@ var crits = [
 		associations: [ categories.attackTypes.rangedSpellArea ],
 		flavor: 'You leave traces in the stuff of magic, allowing other spells to be easily channeled through them.',
 		effect: 'You roll full damage twice and use the best result. Until the end of the encounter, the area of your spell becomes affected by "Magic Conduct". Anyone inside of this area grants advantage when targeted by a spell, and has a disadvantage on saving throws for spells.'
+	},
+	{
+		title: 'Magic Conduct',
+		brutality: 2,
+		associations: [ categories.attackTypes.rangedSpellArea ],
+		flavor: 'You leave traces in the stuff of magic, allowing other spells to be easily channeled through them.',
+		effect: 'You roll full damage twice and use the best result. Until the end of the encounter, the area of your spell becomes affected by "Magic Conduct". Anyone inside of this area grants advantage when targeted by a spell, and has a disadvantage on saving throws for spells.'
+	},
+	{
+		title: 'Uppercut',
+		brutality: 2,
+		associations: [ categories.attackTypes.meleeUnarmed ],
+		flavor: 'You use all your might to send your target flying.',
+		effect: 'You roll full damage twice and use the best result. You push the target a number of spaces equal to your strength modifier.'
+	},
+	{
+		title: 'Low Kick',
+		brutality: 2,
+		associations: [ categories.attackTypes.meleeUnarmed ],
+		flavor: 'You make a feint with your fist, but decide to go for a low kick instead, knocking the target off its feet.',
+		effect: 'You roll full damage twice and use the best result. The target falls prone.'
+	},
+	{
+		title: 'Five-Point-Palm Exploding Heart',
+		brutality: 5,
+		associations: [ categories.attackTypes.meleeUnarmed ],
+		flavor: 'The target is affected by the five-point-palm exploding heart technique.',
+		effect: 'You roll full damage twice and use the best result. If the target moves three or more spaces, its heart explodes and it dies instantaneously. The target must succeed on a DC25 consitution or history check to be aware of this effect.'
+	},
+	{
+		title: 'Warrior\'s Repose',
+		brutality: 3,
+		associations: [ categories.meleeMediumBlades, categories.meleeHeavyWeapons, categories.meleeLongWeapons, categories.meleeUnarmed ],
+		flavor: 'You find peace and tranquility in the middle of chaos and destruction.',
+		effect: 'You roll full damage twice and use the best result. You regain the use of one hit die. You may spend it as a free action.'
+	},
+	{
+		title: 'Cutpurse',
+		brutality: 2,
+		associations: [ categories.attackTypes.meleeFineBlades ],
+		flavor: 'You notice that some of the enemy\'s valuables are dangling not too far away from their weak spot and decide to allow your blade a little detour.',
+		effect: 'You roll full damage twice and use the best result. You cut open a secret stash of valuables. To determine the value, roll a number of d10 equal to the target\'s challenge rating and multiply by a modifier set by the DM (default 10).'
 	}
 ];
