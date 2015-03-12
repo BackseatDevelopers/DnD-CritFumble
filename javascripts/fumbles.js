@@ -86,7 +86,7 @@ var fumbles = [
 	{
 		title: 'Strained Muscle',
 		brutality: 5,
-		associations: [categories.attackTypes.meleeUnarmed, categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeHeavyWeapons, categories.attackTypes.meleeLongWeapons],
+		associations: [categories.attackTypes.meleeUnarmed, categories.attackTypes.meleeImprovised, categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeHeavyWeapons, categories.attackTypes.meleeLongWeapons],
 		flavor: 'You were hoping to hit the enemy with all your might, but your grotesque movements caused you to strain a muscle instead, causing you to stop your attack mid-strike.',
 		effect: 'Your attack stops. You let out a loud scream, drawing the attention of your enemies, and take a -2 penalty to strength for the next 1d4 days.'
 	},
@@ -117,6 +117,27 @@ var fumbles = [
 		associations: [ categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeLongWeapons, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeHeavyWeapons ],
 		flavor: 'You hit your enemy, but in a very poorly executed way, causing serious damage to your weapon.',
 		effect: 'Your attack hits but only deals half damage. Until the weapon is repaired, it is cracked, causing it\'s damage die to decrease by one size.'
+	},
+	{
+		title: 'Expose Opening',
+		brutality: 4,
+		associations: [ categories.attackTypes.meleeUnarmed, categories.attackTypes.meleeImprovised, categories.attackTypes.meleeSpell, categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeHeavyWeapons, categories.attackTypes.meleeHeavyWeapons ],
+		flavor: 'You hit your enemy, but you make some miscalculations, exposing yourself to enemy attack in the process.',
+		effect: 'Your attack hits and deals normal damage. All enemies adjacent to you get an opportunity attack with advantage.'
+	},
+	{
+		title: 'Show weakness',
+		brutality: 4,
+		associations: [ ],
+		flavor: 'You fumble your attack, and to top it off, you clearly display your weak spot to the enemy.',
+		effect: 'Your attack misses. (do apply miss effects). The next enemy that targets you with an attack scores an automatic critical hit (extra effects apply).'
+	},
+	{
+		title: 'Static Discharge',
+		brutality: 3,
+		associations: [ categories.damageTypes.lightning ],
+		flavor: 'You make a bunch of mistakes and end up nearly casting the spell on yourself. You can sizzle it just in time, but not without consequences.',
+		effect: 'Your attack stops. You and all adjacent creatures are affected by Static Discharge until the end of the encounter. While you are, whenever you take damage, take 1d4 extra lightning damage.'
 	}
 ];
 

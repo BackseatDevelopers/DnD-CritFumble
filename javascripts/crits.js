@@ -401,7 +401,7 @@ var crits = [
 	{
 		title: 'Set - Up',
 		brutality: 3,
-		associations: [ categories.attackTypes.meleeUnarmed, categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeHeavyWeapons ],
+		associations: [ categories.attackTypes.meleeUnarmed, categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeHeavyWeapons, categories.attackTypes.meleeImprovised ],
 		flavor: 'You strike your enemy fiercely and move in a way that makes it easy for you to anticipate it\'s next move.',
 		effect: 'You roll full damage twice and use the best result. Until the start of your next turn, if the enemy takes any action, you ar granted an attack of opportunity.'
 	},
@@ -429,8 +429,71 @@ var crits = [
 	{
 		title: 'Fatal Blow',
 		brutality: 4,
-		associations: [ categories.attackTypes.meleeUnarmed, categories.attackTypes.meleeSpell, categories.attackTypes.meleeHeavyWeapons, categories.attacktypes.rangedSpellSingle ],
+		associations: [ categories.attackTypes.meleeUnarmed, categories.attackTypes.meleeSpell, categories.attackTypes.meleeHeavyWeapons, categories.attackTypes.rangedSpellSingle, categories.attackTypes.meleeImprovised ],
 		flavor: 'With raw power, you overwhelm your enemy, knocking them out instantly.',
 		effect: 'You roll full damage twice and use the best result. The enemy is knocked unconscious for a full day.' 
+	},
+	{
+		title: 'Disarming Strike',
+		brutality: 3,
+		associations: [ categories.attackTypes.meleeUnarmed, categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeHeavyWeapons, categories.attackTypes.meleeHeavyWeapons ],
+		flavor: 'The enemy parries your attack, but you simply break through their guard, damaging it in the process.',
+		effect: 'You roll full damage twice and use the best result. Any weapon the enemy would naturally use to parry is broken and un-usable. If there is no weapon to parry with, the attack deals double damage.'
+	},
+	{
+		title: 'Nimble feet',
+		brutality: 3,
+		associations: [ categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeUnarmed, categories.attackTypes.meleeLongWeapons, categories.attackTypes.meleeSpell, categories.attackTypes.meleeImprovised ],
+		flavor: 'You dance around your enemy like a cat around a mouse, confusing it and finding the perfect opportunity for a strike.',
+		effect: 'You roll full damage twice and use the best result. You may shift two spaces and move unhindered through the enemy space as if it were an ally.'
+	},
+	{
+		title: 'Create Opportunity',
+		brutality: 3,
+		associations: [ categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeUnarmed, categories.attackTypes.meleeLongWeapons, categories.attackTypes.meleeSpell, categories.attackTypes.meleeImprovised ],
+		flavor: 'Your attack carves a path for others to follow.',
+		effect: '<strong>You roll your damage as normal.</strong> The next attack any ally makes vs this target is an automatic critical hit (don\'t roll), you may random a new extra effect for this new critical hit.'
+	},
+	{
+		title: 'Ice, Ice, Baby!',
+		brutality: 4,
+		associations: [ categories.damageTypes.cold ],
+		flavor: '&quot;Cookin\' MCs like a pound of bacon&quot;',
+		effect: '<strong>You roll your damage as normal.</strong> You may rap about this in-character. If you do, the target gets so burned that you deal the same damage again as fire damage.'
+	},
+	{
+		title: 'MC Hammer',
+		brutality: 4,
+		associations: [ categories.attackTypes.meleeHeavyWeapons ],
+		flavor: '&quot;Can\'t touch this!&quot;',
+		effect: 'You roll full damage twice and use the best result. You taunt all enemies adjacent to you and get a +5 bonus to AC until the end of your next turn.'
+	},
+	{
+		title: 'Sword Magic',
+		brutality: 4,
+		associations: [ categories.attackTypes.meleeMediumBlades ],
+		flavor: 'You time your attack perfectly with your ally, creating a beautiful combo attack.',
+		effect: 'You roll full damage twice and use the best result. The ally you are most friendly with automatically hits your target with a cantrip he or she can cast.'
+	},
+	{
+		title: 'Bait and Switch',
+		brutality: 3,
+		associations: [ ],
+		flavor: 'You synchronize your attack and movement with a nearby ally, covering eachother\'s backs.',
+		effect: 'You roll full damage twice and use the best result. You and the ally closest to you are now in sync. Whenever either of you is targetted by an attack, and adjacent to the other, you may trade places as a free action (no opportunities triggered). If you do, the attack now targets the other person.'
+	},
+	{
+		title: 'Provocative Strike',
+		brutality: 3,
+		associations: [ categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeLongWeapons, categories.attackTypes.meleeHeavyWeapons, categories.attackTypes.meleeImprovised ],
+		flavor: 'You strike out at your enemy, taunting them with harsh words.',
+		effect: 'You roll full damage twice and use the best result. You and the ally closest to you are now in sync. Whenever either of you is targetted by an attack, and adjacent to the other, you may trade places as a free action (no opportunities triggered). If you do, the attack now targets the other person.'
+	},
+	{
+		title: 'Know Your Enemy',
+		brutality: 3,
+		associations: [ categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeLongWeapons, categories.attackTypes.meleeHeavyWeapons, categories.attackTypes.meleeImprovised ],
+		flavor: 'As you rain down pain upon your enemy, you remember some wise words from a book and decide to start paying very close attention to your partner.',
+		effect: 'You roll full damage twice and use the best result. Until the end of this encounter, you have advantage against this target.'
 	}
 ];
