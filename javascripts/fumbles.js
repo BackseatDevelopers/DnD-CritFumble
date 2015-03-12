@@ -75,6 +75,41 @@ var fumbles = [
 		associations: [categories.attackTypes.meleeUnarmed],
 		flavor: 'You miss your swing, lose balance, and effectively punch yourself in the face.',
 		effect: 'You miss the target. You take 1d4 + your strength modifier damage. Roll (don\'t spend) any available hit die. If you roll less than the damage you took you fall prone.'
+	},
+	{
+		title: 'Facegrind',
+		brutality: 5,
+		associations: [],
+		flavor: 'You trip over your own feet, causing you to fall down and land painfully flat on your face, leaving you with a horrible-looking set of scars.',
+		effect: 'Your attack stops. You fall prone. You take a -2 penalty to charisma for the next 1d4 days.'
+	},
+	{
+		title: 'Strained Muscle',
+		brutality: 5,
+		associations: [categories.attackTypes.meleeUnarmed, categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeHeavyWeapons, categories.attackTypes.meleeLongWeapons],
+		flavor: 'You were hoping to hit the enemy with all your might, but your grotesque movements caused you to strain a muscle instead, causing you to stop your attack mid-strike.',
+		effect: 'Your attack stops. You let out a loud scream, drawing the attention of your enemies, and take a -2 penalty to strength for the next 1d4 days.'
+	},
+	{
+		title: 'Ankle Sprain',
+		brutality: 5,
+		associations: [ ],
+		flavor: 'You make a false move, causing you to almost make a nasty fall. You respond quickly by throwing your weight over to the other side, but your ankle cannot handle the weight.',
+		effect: 'Your attack stops. You cannot walk this turn. The DM slides you one space. You take a -2 penalty to speed for the next 1d4 days.'
+	},
+	{
+		title: 'Concussion',
+		brutality: 5,
+		associations: [ categories.attackTypes.meleeSpell, categories.attackTypes.rangedSpellSingle, categories.attackTypes.rangedSpellMulti, categories.attackTypes.rangedSpellArea ],
+		flavor: 'As you try to cast a spell, you notice you cannot focus. You try to push past it anyway, causing your spell to literally blow up in your face.',
+		effect: 'Your attack stops. You take 2d4 damage. You take a -2 penalty to wisdom for the next 1d4 days.'
+	},
+	{
+		title: 'Sprained Wrist',
+		brutality: 5,
+		associations: [ categories.attackTypes.rangedBow, categories.attackTypes.rangedSling, categories.attackTypes.rangedThrown, categories.attackTypes.meleeFineBlades ],
+		flavor: 'You try to show off by thwirling your weapon as you prepare to attack. You almost drop it, and while desperately trying to save face, you sprain your wrist.',
+		effect: 'Your attack stops. You drop your weapon. You take a -2 penalty to dexterity for the next 1d4 days.'
 	}
 ];
 
