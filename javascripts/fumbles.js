@@ -60,7 +60,7 @@ var fumbles = [
 		brutality: 4,
 		associations: [categories.attackTypes.rangedSpellSingle, categories.attackTypes.rangedSpellMulti, categories.attackTypes.rangedSpellArea],
 		flavor: 'You make a mistake and become annoyed and frustrated. You cannot seem to shake that mistake off lightly.',
-		effect: 'Your attack doesn\'t happen, don\'t apply any effects. For 1d8 - your wisdom modifier (minimum 0) turns, you are unable to focus or cast spells'
+		effect: 'Your attack stops. For 1d8 - your wisdom modifier (minimum 0) turns, you are unable to focus or cast spells'
 	},
 	{
 		title: 'Wide Swing',

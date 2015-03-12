@@ -424,6 +424,13 @@ var crits = [
 		brutality: 4,
 		associations: [ categories.damageTypes.radiant ],
 		flavor: 'Your righteous strike of radiance creates an outflow of radiant power, protecting you and your allies by shining brightly into the eyes of your enemies.',
-		effect: 'For the next 1d4 rounds, all allies within 50ft of you are granted partial cover.' 
+		effect: 'You roll full damage twice and use the best result. For the next 1d4 rounds, all allies within 50ft of you are granted partial cover.' 
+	},
+	{
+		title: 'Fatal Blow',
+		brutality: 4,
+		associations: [ categories.attackTypes.meleeUnarmed, categories.attackTypes.meleeSpell, categories.attackTypes.meleeHeavyWeapons, categories.attacktypes.rangedSpellSingle ],
+		flavor: 'With raw power, you overwhelm your enemy, knocking them out instantly.',
+		effect: 'You roll full damage twice and use the best result. The enemy is knocked unconscious for a full day.' 
 	}
 ];
