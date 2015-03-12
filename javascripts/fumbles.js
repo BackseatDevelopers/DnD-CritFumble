@@ -110,6 +110,13 @@ var fumbles = [
 		associations: [ categories.attackTypes.rangedBow, categories.attackTypes.rangedSling, categories.attackTypes.rangedThrown, categories.attackTypes.meleeFineBlades ],
 		flavor: 'You try to show off by thwirling your weapon as you prepare to attack. You almost drop it, and while desperately trying to save face, you sprain your wrist.',
 		effect: 'Your attack stops. You drop your weapon. You take a -2 penalty to dexterity for the next 1d4 days.'
+	},
+	{
+		title: 'Crack',
+		brutality: 4,
+		associations: [ categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeLongWeapons, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeHeavyWeapons ],
+		flavor: 'You hit your enemy, but in a very poorly executed way, causing serious damage to your weapon.',
+		effect: 'Your attack hits but only deals half damage. Until the weapon is repaired, it is cracked, causing it\'s damage die to decrease by one size.'
 	}
 ];
 
