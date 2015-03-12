@@ -495,5 +495,33 @@ var crits = [
 		associations: [ categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeLongWeapons, categories.attackTypes.meleeHeavyWeapons, categories.attackTypes.meleeImprovised ],
 		flavor: 'As you rain down pain upon your enemy, you remember some wise words from a book and decide to start paying very close attention to your partner.',
 		effect: 'You roll full damage twice and use the best result. Until the end of this encounter, you have advantage against this target.'
+	},
+	{
+		title: 'Power to the People!',
+		brutality: 3,
+		associations: [ categories.damageTypes.lightning ],
+		flavor: 'You master the lightning and cook up a side effect for your allies.',
+		effect: 'You roll full damage twice and use the best result. Until the end of this encounter, whenever your allies deal damage to an enemy, they add 2 lightning damage.'
+	},
+	{
+		title: 'Shock armor',
+		brutality: 3,
+		associations: [ categories.damageTypes.lightning ],
+		flavor: 'You know how to handle lightning, and are even able to tap its strength to create a barrier.',
+		effect: 'You roll full damage twice and use the best result. Choose yourself or one ally within 15ft of you. They gain +1 to AC and, when they are hit, deal 1d4 damage to their attacker.'
+	},
+	{
+		title: 'Thriller!',
+		brutality: 4,
+		associations: [ categories.damageTypes.necrotic ],
+		flavor: 'Through the power of death and the life thereafter, you are able to perform some quaint feats.',
+		effect: 'You roll full damage twice and use the best result. If, during this encounter, the target is killed by necrotic damage, it comes on to life for one turn, under your control. It deals only half damage in this state.'
+	},
+	{
+		title: 'Necroshield',
+		brutality: 3,
+		associations: [ categories.damageTypes.necrotic ],
+		flavor: 'Your enemies (and probably some of your allies) are appalled by your display of necromastery, making them reluctant to attack you.',
+		effect: 'You roll full damage twice and use the best result. Until the end of this turn, enemies try to avoid you as much as they can. Enemies cannot willingly move closer to you and have disadvantage on any attacks.'
 	}
 ];
