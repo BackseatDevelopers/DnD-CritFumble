@@ -390,5 +390,40 @@ var crits = [
 		associations: [ categories.attackTypes.meleeFineBlades ],
 		flavor: 'You notice that some of the enemy\'s valuables are dangling not too far away from their weak spot and decide to allow your blade a little detour.',
 		effect: 'You roll full damage twice and use the best result. You cut open a secret stash of valuables. To determine the value, roll a number of d10 equal to the target\'s challenge rating and multiply by a modifier set by the DM (default 10).'
+	},
+	{
+		title: 'Acid Pool',
+		brutality: 2,
+		associations: [ categories.damageTypes.acid ],
+		flavor: 'You produce more acid than needed for the attack, leaving some of it to drip on the ground, creating a small pool of acid.',
+		effect: 'You roll full damage twice and use the best result. The target\'s location becomes the origin of a cube 1 for one round. Any non-flying enemy starting their turn in this cube must make a DC15 dexterity check or take 5 acid damage. You can sustain this effect as a bonus action.'
+	},
+	{
+		title: 'Set - Up',
+		brutality: 3,
+		associations: [ categories.attackTypes.meleeUnarmed, categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeHeavyWeapons ],
+		flavor: 'You strike your enemy fiercely and move in a way that makes it easy for you to anticipate it\'s next move.',
+		effect: 'You roll full damage twice and use the best result. Until the start of your next turn, if the enemy takes any action, you ar granted an attack of opportunity.'
+	},
+	{
+		title: 'Boomerang',
+		brutality: 4,
+		associations: [ categories.attackTypes.rangedThrown ],
+		flavor: 'You throw your weapon in a way that you are certain it will return to you, and it turns out even better than you had anticipated.',
+		effect: 'You roll full damage twice and use the best result. At the beginning of your next turn, make an additional attack (no action) against the target. If it hits, the target takes damage equal to half the damage you did earlier. Either way, if you succeed a DC10 dexterity check, your weapon returns to your hand.'
+	},
+	{
+		title: 'Radiant Glow',
+		brutality: 3,
+		associations: [ categories.damageTypes.radiant ],
+		flavor: 'You make a glorious radiant attack. Inspired by the warm glow emanating from you, your allies are inspired to fight on.',
+		effect: 'You roll full damage twice and use the best result. Each ally that can see you regains the use of one hit die.' 
+	},
+	{
+		title: 'Radiant Protection',
+		brutality: 4,
+		associations: [ categories.damageTypes.radiant ],
+		flavor: 'Your righteous strike of radiance creates an outflow of radiant power, protecting you and your allies by shining brightly into the eyes of your enemies.',
+		effect: 'For the next 1d4 rounds, all allies within 50ft of you are granted partial cover.' 
 	}
 ];
