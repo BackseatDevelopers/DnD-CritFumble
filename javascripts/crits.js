@@ -192,7 +192,7 @@ var crits = [
 		title: 'Thundering Echo',
 		brutality: 2,
 		associations: [ categories.damageTypes.thunder ],
-		flavor: 'Your thunder leaves the enemy confused and disoriented, and that\'s not even the worst of it!',
+		flavor: 'Your thunder leaves the enemy deafened and vulnerable.',
 		effect: 'You roll full damage twice and use the best result. The target is deafened. Until the end of the encounter, whenever any thunder ability is used or activated, the target takes 2 damage.'
 	},
 	{
@@ -221,7 +221,7 @@ var crits = [
 		brutality: 3,
 		associations: [ categories.attackTypes.meleeLongWeapons ],
 		flavor: 'Your strike slices through the target with great ease, allowing you to pivot and spin.',
-		effect: 'You roll full damage twice and use the best result. All other targets in range of your weapon take half as much damage.'
+		effect: 'You roll full damage twice and use the best result. All other enemies in range of your weapon take half as much damage.'
 	},
 	{
 		title: 'Body of Steel',
@@ -586,5 +586,68 @@ var crits = [
 		associations: [ categories.attackTypes.rangedSling ],
 		flavor: '',
 		effect: 'You roll full damage twice and use the best result. You may add 1d20 to the damage for each testicle your enemy has.'
+	},
+	{
+		title: 'Master of Puppets',
+		brutality: 5,
+		associations: [ categories.damageTypes.psychic ],
+		flavor: '&quot;Twisting your mind and smashing your dreams&quot;',
+		effect: 'You roll full damage twice and use the best result. You control the target during it\'s next turn but it can take only one action.'
+	},
+	{
+		title: 'Fus Ro Da!',
+		brutality: 3,
+		associations: [ categories.damageTypes.force ],
+		flavor: 'Out of nowhere, you remember some ancient draconic-like words. Without even thinking about it, you shout them out loud, creating a mealstrom of power.',
+		effect: 'You roll full damage twice and use the best result. The target is pushed 3d4 spaces and is knocked prone. If you are a dragonborn, you may double this.'
+	},
+	{
+		title: 'Icy Mist',
+		brutality: 4,
+		associations: [ categories.damageTypes.cold, categories.attackTypes.meleeSpell, categories.attackTypes.rangedSpellMulti, categories.attackTypes.rangedSpellSingle ],
+		flavor: 'The coldness of your spell freezes even what little water there is in the air, transferring the cold, creating puffs of dangerous mist.',
+		effect: 'You roll full damage twice and use the best result. All creatures adjacent to all targets of this spell take half as much damage per plus.'
+	},
+	{
+		title: 'Smokescreen',
+		brutality: 4,
+		associations: [ categories.damageTypes.fire ],
+		flavor: 'Your fire soars up high, eating away at your enemies and creating puffs of toxic, magical smoke.',
+		effect: 'You roll full damage twice and use the best result. Every target of this attack becomes the source of a Sphere 1. The sphere fills up with smoke which lasts until the end of your next turn. Allies inside the smoke get partial cover. Enemies ending their turn in the smoke take 1d4 poison damage.'
+	},
+	{
+		title: 'Dexterous Reaction',
+		brutality: 4,
+		associations: [ categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeUnarmed, categories.attackTypes.rangedBow, categories.attackTypes.rangedSling, categories.attackTypes.rangedThrown ],
+		flavor: 'An opportunity presents itself and your keen instincts make you notice this. You have a split second to adapt to the situation, making it even more advantagous for you.',
+		effect: 'You roll full damage twice and use the best result. If you have any special moves, you may change change your current attack into such a move before calculating the damage. Do not pay the costs for this move. Otherwise, make an additional basic attack against the target for half damage.'
+	},
+	{
+		title: 'Shish Kebab',
+		brutality: 4,
+		associations: [ categories.attackTypes.meleeLongWeapons ],
+		flavor: 'Being the lover of shish kebab that you are, you decide to turn your enemies into one.',
+		effect: 'You roll full damage twice and use the best result. If there is an enemy behind your target, you may choose to skewer it, dealing the same damage to it as well.'
+	},
+	{
+		title: 'Thunder and Lightning',
+		brutality: 2,
+		associations: [ categories.damageTypes.thunder ],
+		flavor: 'Thunder and lightning are two phenomena that are never far apart, and you like to remind your enemies.',
+		effect: 'You roll full damage twice and use the best result. The target gains vulnerable 10 lightning.'
+	},
+	{
+		title: 'Thunder and Lightning',
+		brutality: 2,
+		associations: [ categories.damageTypes.lightning ],
+		flavor: 'Thunder and lightning are two phenomena that are never far apart, and you like to remind your enemies.',
+		effect: 'You roll full damage twice and use the best result. The target gains vulnerable 10 thunder.'
+	},
+	{
+		title: 'Chop, chop!',
+		brutality: 4,
+		associations: [ categories.attackTypes.meleeMediumBlades ],
+		flavor: 'You\'d better hurry, because there\'s chopping to be done!',
+		effect: 'You roll full damage twice and use the best result. Until the end of the encounter, your speed increases by 2 and you may treat your weapon as high crit.'
 	}
 ];

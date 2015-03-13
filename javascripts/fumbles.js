@@ -145,5 +145,19 @@ var fumbles = [
 		associations: [ categories.attackTypes.rangedBow, categories.attackTypes.rangedSling ],
 		flavor: 'The string of your weapon snaps in two, essentially rendering it useless for now.',
 		effect: 'Your attack stops. Your weapon is now useless until repaired.'
+	},
+	{
+		title: 'Madness',
+		brutality: 4,
+		associations: [ categories.damageTypes.psychic ],
+		flavor: 'You get completely tangled up in your own psychic effects, and for a moment, your brain simply cannot handle it. You pick up a nearby rock and blindly charge into battle.',
+		effect: 'Your attack stops. During your next turn, you are forced to move as close as you can to the closest creature and make an improvised weapon attack against it.'
+	},
+	{
+		title: 'Cowardice',
+		brutality: 4,
+		associations: [ ],
+		flavor: 'Even the most experienced warriors can have a bad day. Suddenly, it all becomes too much for you and for a moment, all you can think about is getting the hell out of here.',
+		effect: 'Your attack stops. On your next turn, you are forced to try and run away from the enemies. You cannot attack during this turn.'
 	}
 ];
