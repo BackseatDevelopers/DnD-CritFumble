@@ -143,8 +143,16 @@ $(document).ready(function() {
 				}
 			}
 
-			if(sourceItemCategoriesAreAllSatisfied)
+			if(sourceItemCategoriesAreAllSatisfied) {
+
+				// the more categories you satisfy, the more relevant you are
+				for(var satisfaction in sourceItemCategorySatisfaction) {	
+					associatedItems.push(sourceItem);
+				}
+				
+				// push it at least twice, because it's more relevant than generic, which already gets added once! :)
 				associatedItems.push(sourceItem);
+			}
 
 		}
 		return associatedItems;

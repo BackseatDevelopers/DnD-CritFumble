@@ -523,5 +523,68 @@ var crits = [
 		associations: [ categories.damageTypes.necrotic ],
 		flavor: 'Your enemies (and probably some of your allies) are appalled by your display of necromastery, making them reluctant to attack you.',
 		effect: 'You roll full damage twice and use the best result. Until the end of this turn, enemies try to avoid you as much as they can. Enemies cannot willingly move closer to you and have disadvantage on any attacks.'
+	},
+	{
+		title: 'Arrow to the knee',
+		brutality: 3,
+		associations: [ categories.attackTypes.rangedBow ],
+		flavor: 'Your target used to be an adventurer like you, but then they took an arrow to the knee.',
+		effect: 'You roll full damage twice and use the best result. The target moves at half it\'s speed until the end of the encounter.'
+	},
+	{
+		title: 'Headshot',
+		brutality: 5,
+		associations: [ categories.attackTypes.rangedBow ],
+		flavor: 'Your accuracy and precision pay off in the form of pure damage.',
+		effect: 'You roll full damage twice and use the best result. If the target is bloodied afterwards, it dies instantly. Otherwise, add 1d20 dmg.'
+	},
+	{
+		title: 'Go for the eyes, Boo!',
+		brutality: 4,
+		associations: [ categories.attackTypes.rangedThrown, categories.attackTypes.rangedSling ],
+		flavor: 'The projectile hits the target square in the eye, causing serious injury.',
+		effect: 'You roll full damage twice and use the best result. If the target has one or more eyes, it is blinded and can only use a move action on its next turn.'
+	},
+	{
+		title: 'Pinning shot',
+		brutality: 4,
+		associations: [ categories.attackTypes.rangedBow ],
+		flavor: 'You shoot the target in its foot, effectively pinning it to the ground.',
+		effect: 'You roll full damage twice and use the best result. The target must make a DC15 dexterity saving throw or fall prone. The target is restrained. It can use a standard action to pull out the arrow, un-restraining itself and taking 1d4 damage.'
+	},
+	{
+		title: 'Powershot',
+		brutality: 4,
+		associations: [ categories.attackTypes.rangedBow ],
+		flavor: 'You put extra power into your shot and hit the target square in the center of its body.',
+		effect: 'You roll full damage twice and use the best result. The target is pushed two squares. They must make a DC15 dexterity saving throw or fall prone.'
+	},
+	{
+		title: 'Riccochet',
+		brutality: 3,
+		associations: [ categories.attackTypes.rangedSling ],
+		flavor: 'You spin up your sling to maximum speed and your target so hard, it bounces off of them, hitting a second target as well.',
+		effect: 'You roll full damage twice and use the best result. You may choose a secondary target within 15ft of the original target. They are also hit by the attack, but take only half damage.'
+	},
+	{
+		title: 'Severed Tendon',
+		brutality: 5,
+		associations: [ categories.attackTypes.rangedBow, categories.attackTypes.rangedThrown ],
+		flavor: 'You aim for a very specific spot on the target\'s joints. Your attack cleanly hits the tendon you were aiming for, hampering the enemy\'s attacks.',
+		effect: 'You roll full damage twice and use the best result. You choose to either hit their arms or legs. Arms gives them disadvantage on all physical attacks. Legs gives them -2 speed. The duration of this effect is 1d4 days, or until a DC25 proficient medicine check succeeds. '
+	},
+	{
+		title: 'Piercing Shot',
+		brutality: 5,
+		associations: [ categories.attackTypes.rangedBow ],
+		flavor: 'No enemy is safe in the wake of your passing arrow.',
+		effect: 'You roll full damage twice and use the best result. You may make an additional attack against any creature your arrow passes through.'
+	},
+	{
+		title: 'Nut Cracker!',
+		brutality: 5,
+		associations: [ categories.attackTypes.rangedSling ],
+		flavor: '',
+		effect: 'You roll full damage twice and use the best result. You may add 1d20 to the damage for each testicle your enemy has.'
 	}
 ];

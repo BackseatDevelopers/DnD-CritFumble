@@ -138,6 +138,12 @@ var fumbles = [
 		associations: [ categories.damageTypes.lightning ],
 		flavor: 'You make a bunch of mistakes and end up nearly casting the spell on yourself. You can sizzle it just in time, but not without consequences.',
 		effect: 'Your attack stops. You and all adjacent creatures are affected by Static Discharge until the end of the encounter. While you are, whenever you take damage, take 1d4 extra lightning damage.'
+	},
+	{
+		title: 'Snap!',
+		brutality: 5,
+		associations: [ categories.attackTypes.rangedBow, categories.attackTypes.rangedSling ],
+		flavor: 'The string of your weapon snaps in two, essentially rendering it useless for now.',
+		effect: 'Your attack stops. Your weapon is now useless until repaired.'
 	}
 ];
-
