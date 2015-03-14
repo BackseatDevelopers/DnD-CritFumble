@@ -649,5 +649,26 @@ var crits = [
 		associations: [ categories.attackTypes.meleeMediumBlades ],
 		flavor: 'You\'d better hurry, because there\'s chopping to be done!',
 		effect: 'You roll full damage twice and use the best result. Until the end of the encounter, your speed increases by 2 and you may treat your weapon as high crit.'
+	},
+	{
+		title: 'Festering Wound',
+		brutality: 4,
+		associations: [ categories.damageTypes.poison ],
+		flavor: 'The poison creates a festering wound on the target\'s body, marking a clear spot of weakness.',
+		effect: 'You roll full damage twice and use the best result. Until the end of the encounter, Any roll of 17 or higher against the target is a critical hit.'
+	},
+	{
+		title: 'Reactive Poison',
+		brutality: 4,
+		associations: [ categories.damageTypes.poison ],
+		flavor: 'Every time you add more poison, a reaction occurs, making it more potent.',
+		effect: 'You roll full damage twice and use the best result. The target gains vulnerable 1d4 to poison. Every time it is hit by a poison attack, this vunlerability increases by 1d4.'
+	},
+	{
+		title: 'Echoes of doom',
+		brutality: 5,
+		associations: [ categories.damageTypes.thunder ],
+		flavor: 'The sound of the thunder gets stuck in their head, rolling, rumbling, spelling their doom.',
+		effect: 'You roll full damage twice and use the best result. All targets of your ability gain vulnerable 5 all damage.'
 	}
 ];

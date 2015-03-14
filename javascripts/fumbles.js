@@ -159,5 +159,40 @@ var fumbles = [
 		associations: [ ],
 		flavor: 'Even the most experienced warriors can have a bad day. Suddenly, it all becomes too much for you and for a moment, all you can think about is getting the hell out of here.',
 		effect: 'Your attack stops. On your next turn, you are forced to try and run away from the enemies. You cannot attack during this turn.'
+	},
+	{
+		title: 'Sweaty Hands',
+		brutality: 4,
+		associations: [ categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeHeavyWeapons, categories.attackTypes.meleeLongWeapons, categories.attackTypes.rangedSling ],
+		flavor: 'You make some unnecesary movements for show, but you didn\'t realise your hands were <strong>this</strong> sweaty.',
+		effect: 'Your attack stops. Roll damage as normal, but instead of dealing it, your weapon flies away this many spaces in the direction of your enemy. Any creature it passes though must make a DC15 dexterity check or take 1d4 damage.'
+	},
+	{
+		title: 'Clumsy Punch',
+		brutality: 4,
+		associations: [ categories.attackTypes.meleeUnarmed ],
+		flavor: 'The punch you throw is sluggish, slow, and easy to dodge. The target sidesteps your attack with ease, causing you to stumble.',
+		effect: 'Your attack stops. The DM may move you one square in any logical direction. Up to two adjacent enemies are granted an attack of opportunity.'
+	},
+	{
+		title: 'Touching Yourself',
+		brutality: 5,
+		associations: [ categories.attackTypes.meleeSpell ],
+		flavor: 'As you are casting the spell, a sudden itch on your nose comes up and you are silly enough to scratch it.',
+		effect: 'Your attack hits yourself square in the face. Roll full damage twice and use the highest result.'
+	},
+	{
+		title: 'Improvisation Failure',
+		brutality: 1,
+		associations: [ categories.attackTypes.meleeImprovised ],
+		flavor: 'As it turns out, you\'re not exactly proficient with the object you chose to make an improvised attack with',
+		effect: 'Your attack stops. You drop the object on your foot and take 1d4 damage.'
+	},
+	{
+		title: 'Home Run!',
+		brutality: 2,
+		associations: [ categories.attackTypes.rangedThrown ],
+		flavor: 'You throw your weapon with all your might and miss...',
+		effect: 'Your attack stops. Roll a number of d10 equal to your strength modifier. Your weapon is thrown this far. If it would otherwise return, it doesn\'t.'
 	}
 ];
