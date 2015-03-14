@@ -543,7 +543,7 @@ var crits = [
 		brutality: 4,
 		associations: [ categories.attackTypes.rangedThrown, categories.attackTypes.rangedSling ],
 		flavor: 'The projectile hits the target square in the eye, causing serious injury.',
-		effect: 'You roll full damage twice and use the best result. If the target has one or more eyes, it is blinded and can only use a move action on its next turn.'
+		effect: 'You roll full damage twice and use the best result. If the target has one or more eyes, it is blinded for one round and cannot attack during this time.'
 	},
 	{
 		title: 'Pinning shot',
