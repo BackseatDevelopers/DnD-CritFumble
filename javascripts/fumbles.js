@@ -194,5 +194,12 @@ var fumbles = [
 		associations: [ categories.attackTypes.rangedThrown ],
 		flavor: 'You throw your weapon with all your might and miss...',
 		effect: 'Your attack stops. Roll a number of d10 equal to your strength modifier. Your weapon is thrown this far. If it would otherwise return, it doesn\'t.'
+	},
+	{
+		title: 'Stick it to the man!',
+		brutality: 1,
+		associations: [ categories.attackTypes.meleeFineBlades ],
+		flavor: 'The blade you are wielding gets stuck in your enemy, and you loosen up your grip.',
+		effect: 'You roll damage as normal and deal half damage. Your weapon is stuck in the target and you are disarmed. To get it back, get in melee range of the target and win a dex contest. This contest requires the use of one action. The target gets advantage on the contest. If you win the contest, the target takes 1W damage.'
 	}
 ];

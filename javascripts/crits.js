@@ -670,5 +670,54 @@ var crits = [
 		associations: [ categories.damageTypes.thunder ],
 		flavor: 'The sound of the thunder gets stuck in their head, rolling, rumbling, spelling their doom.',
 		effect: 'You roll full damage twice and use the best result. All targets of your ability gain vulnerable 5 all damage.'
+	},
+	{
+		title: 'Arcane Revelation',
+		brutality: 3,
+		associations: [ categories.attackTypes.meleeSpell, categories.attackTypes.rangedSpellSingle, categories.attackTypes.rangedSpellMulti, categories.attackTypes.rangedSpellArea ],
+		flavor: 'While weaving your spell into the fabric of magic, you have a revelation about the workings of magic.',
+		effect: 'You roll full damage twice and use the best result. Until the end of this day, you have advantage on arcana checks and saving throws vs any spells.'
+	},
+	{
+		title: 'Steady Grip',
+		brutality: 3,
+		associations: [ categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeMediumBlades, categories.attackTypes.meleeHeavyWeapons, categories.attackTypes.meleeLongWeapons ],
+		flavor: 'The weapon you are wielding feels like it was custom tailored to your very hand. You grip it tightly and strike out with brutal accuracy.',
+		effect: 'You roll full damage twice and use the best result. Until the end of this encounter, increase your weapon die (or dice) by one size.'
+	},
+	{
+		title: 'Swift Cut',
+		brutality: 3,
+		associations: [ categories.attackTypes.meleeFineBlades ],
+		flavor: 'You spot a weakness in the enemy\'s defence, allowing you to make a very swift strike.',
+		effect: 'You roll full damage twice and use the best result. You gain a bonus action.'
+	},
+	{
+		title: 'Agile Opportunist',
+		brutality: 4,
+		associations: [ categories.attackTypes.meleeFineBlades ],
+		flavor: 'Like a hawk watches its prey, you watch yours.',
+		effect: 'You roll full damage twice and use the best result. Until the end of your next turn, if the target takes any action, they will provoke an opportunity action from you. The enemy may make a DC20 perception check to become aware of this.'
+	},
+	{
+		title: 'Flurry',
+		brutality: 4,
+		associations: [ categories.attackTypes.meleeFineBlades ],
+		flavor: 'A flurry of strikes is unleashed upon your enemy.',
+		effect: '<strong>You roll damage as normal.</strong> You gain a number of bonus actions equal to your dex modifier, but can only spend them on attacks on this target. You gain advantage over this target until the start of its next turn.'
+	},
+	{
+		title: 'Omnislash',
+		brutality: 5,
+		associations: [ categories.attackTypes.meleeFineBlades, categories.attackTypes.meleeMediumBlades ],
+		flavor: 'Your power wells up inside of you, and you prepare for to unleash a whirlwind of hacks and slashes upon your enemy, granting them no pause.',
+		effect: '<strong>You roll damage as normal.</strong> You gain a number of actions equal to your enhancement bonus. You may only use these actions to attack the current target. You may shift at no additional cost until the end of this turn.'
+	},
+	{
+		title: 'Michael Bay',
+		brutality: 5,
+		associations: [ categories.attackTypes.rangedBow, categories.attackTypes.rangedSling, categories.attackTypes.rangedThrown, categories.attackTypes.rangedSpellSingle, categories.attackTypes.rangedSpellMulti ],
+		flavor: 'You know how it goes.',
+		effect: '<strong>You roll damage as normal.</strong> Every target becomes the center of a sphere 4. Roll attack for each new target. You have advantage vs enemies and disadvantage vs allies on attack rolls, and the inverse for saving throws.'
 	}
 ];
