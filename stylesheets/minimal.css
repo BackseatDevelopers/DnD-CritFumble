@@ -29,9 +29,6 @@
 .option input {
   display: none;
 }
-.categories {
-  margin-bottom: 10px;
-}
 .option label {
   mask-type: luminance;
   mask-repeat: space;

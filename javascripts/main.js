@@ -21,8 +21,9 @@ $(document).ready(function() {
 			var option = category[optionName];
 
 			var optionElement = optionTemplate.clone();
+			optionElement.find("input[type=checkbox]").data("association", option);
 			optionElement.find(".description").text(option.description);
-			optionElement.find(".tagline").text(option.tagline);	
+			optionElement.find(".tagline").text(option.tagline);
 			optionElement.data("name", optionName);
 
 			(function(innerOption, innerOptionElemnt) {
@@ -62,7 +63,32 @@ $(document).ready(function() {
 	$("button.reset").click(function() {
 		$(".option :checked").prop("checked", false);
 		displayResult(null);
+		showSelectedOptions();
 	});
+
+	$("body").on("change", ".option input[type=checkbox]", function() {
+		showSelectedOptions();
+	});
+
+	$("body").on("click", ".active-associations .association", function() {
+		var associationToUncheck = $(this).data("association");
+		$(":checked").each(function() {
+			if($(this).data("association") === associationToUncheck) {
+				$(this).prop("checked", false);
+			}
+		})
+		showSelectedOptions();
+	});
+
+	function showSelectedOptions() {
+		$(".active-associations").empty();
+		var activeAssociations = getAssociations();
+
+		for(var i = 0; i < activeAssociations.length; i++) {
+			var association = activeAssociations[i];
+			$("<span />").addClass("association").css("background-color", association.color).html(association.description).attr("title", association.tagline).data("association", association).appendTo(".active-associations");
+		}
+	}
 
 	function linkCategories() {
 		for(var categoryName in categories) {
@@ -91,20 +117,12 @@ $(document).ready(function() {
 	}
 
 	function getAssociations() {		
-		var associations = [];		
-		var checkedOptions = $(".option :checked");
+		var associations = [];	
 
-		for(categoryName in categories) {
-			var category = categories[categoryName];
+		$(".option :checked").each(function() {
+			associations.push($(this).data("association"));
+		});
 
-			checkedOptions.each(function() {
-				var checkedOption = $(this);
-				if(checkedOption.parents(".category").data("name") === categoryName) {
-					var categoryOption = category[checkedOption.parents(".option").data("name")];
-					associations.push(categoryOption);
-				}
-			});
-		}
 
 		return associations;
 	}

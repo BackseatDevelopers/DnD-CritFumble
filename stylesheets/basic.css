@@ -151,3 +151,35 @@
 .result .brutality.b5 {
   color: #f00;
 }
+
+.active-associations {
+  padding: 5px;
+  font-weight: bold;
+  min-height: 30px;
+}
+.active-associations:after {
+  content: "";
+  padding: 0;
+  margin: 0;
+  height: 0;
+  width: 0;
+  display: block;
+  float: none;
+  clear: both;
+}
+
+.active-associations .association {
+  padding: 5px;
+  height: 20px;
+  line-height: 20px;
+  display: block;
+  float: right;
+  border: 1px solid white;
+  cursor: pointer;
+
+  -webkit-user-select: none;    
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
