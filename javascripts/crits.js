@@ -8,14 +8,14 @@ var crits = [
 		brutality: 5,
 		associations: [atk.meleeMediumBlades, atk.meleeHeavyWeapons],
 		flavor: 'You strike your enemy with a very heavy blow to the head.',
-		effect: 'You roll your full damage twice and use the best result. If the target would be bloodied after this, it dies instantly (boss monster: deal double damage instead)'
+		effect: 'You roll your full damage three times and add up the results. If the target would be bloodied after this, it dies instantly (boss monster: deal double damage instead)'
 	},
 	{
 		title: 'Vorpal Strike',
 		brutality: 5,
 		associations: [ atk.meleeFineBlades, atk.meleeMediumBlades, atk.meleeLongWeapons ],
 		flavor: '"Did you just..?" - Yep!',
-		effect: 'If the enemy\'s challenge rating is lower than your current level and it has a head, you cut it off cleanly. Otherwise, roll your full damage twice and use the best result.'
+		effect: 'If the enemy\'s challenge rating is lower than your current level and it has a head, you cut it off cleanly. Otherwise, roll your full damage three times and add up the results.'
 	},
 	{
 		title: 'Bloodlust',
@@ -64,7 +64,7 @@ var crits = [
 		brutality: 4,
 		associations: [ atk.rangedSpellSingle, atk.rangedSpellMulti, atk.meleeSpell, atk.rangedSpellArea ],
 		flavor: 'The flow of battle inspires you to greatness. You are able to effortlessly cast your greatest spells.',
-		effect: 'Your spell deals damage as normal. Roll a d10. Until the end of this encounter, you are able to cast a spell of that level or lower, for which you have a spell slot, without expending the slot (even if you have already expended that slot).'
+		effect: 'Your spell deals damage as normal. Roll a d10. Until the end of this encounter, you are able to cast a spell of that level or lower, which you know, without expending the required slot (even if you have already expended that slot).'
 	},
 	{
 		title: 'Empowering Upgrade',
@@ -78,14 +78,21 @@ var crits = [
 		brutality: 2,
 		associations: [ atk.rangedSpellMulti, atk.rangedSpellArea ],
 		flavor: 'You cast your spell perfectly and with ease, leaving your enemies wondering what happened.',
-		effect: 'You roll full damage twice and use the best result for your current target. You automatically hit all other targets.'
+		effect: 'You roll full damage twice and add up the results for the current target. You automatically hit all other targets.'
 	},
 	{
 		title: 'Explodination',
 		brutality: 2,
 		associations: [ atk.rangedSpellArea ],
 		flavor: 'With great focus, skill, and precision, you are able to expand your spell\'s range beyond the norm.',
-		effect: 'You roll full damage twice and use the best result for your current target. Choose up to one dimension of your spell\'s area. You may increase it to up to twice its original value.'
+		effect: 'You roll full damage twice and add up the results for the current target. Choose up to one dimension of your spell\'s area. You may increase it to up to twice its original value.'
+	},
+	{
+		title: 'Critical Explosion',
+		brutality: 4,
+		associations: [ atk.rangedSpellArea ],
+		flavor: 'Pain and misery rain down on the battlefield.',
+		effect: 'You roll full damage twice and add up the results for all targets.'
 	},
 	{
 		title: 'Alchemical Sniper',
@@ -345,13 +352,6 @@ var crits = [
 		associations: [ dmg.psychic ],
 		flavor: 'You invade your target\'s mind, muddling their perception and mixing in your illusion.',
 		effect: 'You roll full damage twice and add up the results. You create an illusion in an unoccupied space within 5 spaces of you. At the start of its turn, the target must make a DC15 wisdom saving throw or be compelled to do anything in its power to attack the illusion until it is dispelled. When the illusion takes damage, it is dispelled. It has your defences and cannot take any actions.'
-	},
-	{
-		title: 'Magic Conduct',
-		brutality: 2,
-		associations: [ atk.rangedSpellArea ],
-		flavor: 'You leave traces in the stuff of magic, allowing other spells to be easily channeled through them.',
-		effect: 'You roll full damage twice and add up the results. Until the end of the encounter, the area of your spell becomes affected by "Magic Conduct". Anyone inside of this area grants advantage when targeted by a spell, and has a disadvantage on saving throws for spells.'
 	},
 	{
 		title: 'Magic Conduct',
@@ -708,7 +708,7 @@ var crits = [
 		brutality: 4,
 		associations: [ atk.meleeFineBlades ],
 		flavor: 'A flurry of strikes is unleashed upon your enemy.',
-		effect: '<strong>You roll damage as normal.</strong> You gain advantage over this target until the start of its next turn. You can make up to five bonus actions as free actions during this turn, but only if their target is the current target.'
+		effect: '<strong>You roll damage as normal.</strong> You gain advantage over this target until the start of its next turn. You may keep attacking the current target as a free action until you miss.'
 	},
 	{
 		title: 'Omnislash',
