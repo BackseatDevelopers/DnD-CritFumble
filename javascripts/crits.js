@@ -884,5 +884,96 @@ var crits = [
 		associations: [ ],
 		flavor: 'A sudden divine surge of force courses through your veins, making them throb with raw power.',
 		effect: 'You roll full damage twice and add up the results. Regain the use of any charges, abilities, etc. as if you had just had a long rest (just you, not your items).'
+	},
+	{
+		title: 'Phoenix',
+		brutality: 4,
+		associations: [dmg.fire],
+		flavor: 'You channel the flames of a phoenix, its re-invigorating you and your allies.',
+		effect: 'You roll full damage twice and add up the results. Choose up to one ally or yourself within 120ft. The ally regains health as though they had just spent a healing surge.'
+	},
+	{
+		title: 'Scorched Earth',
+		brutality: 2,
+		associations: [dmg.fire],
+		flavor: 'Your flames well up and scorch the very earth itself, causing it to smolder.',
+		effect: 'You roll full damage twice and add up the results. The target\'s square and up to two adjacent squares of your choosing smolder for one turn. Any creature starting their turn in it takes 1d6 fire damage.'
+	},
+	{
+		title: 'Buried blade',
+		brutality: 3,
+		associations: [atk.meleeFineBlades],
+		flavor: 'You bury your blade deep into the enemy',
+		effect: 'You roll full damage twice and add up the results. Until the end of your next turn, if the enemy tries to move, you may use your reaction to yank the blade, automatically hitting a normal attack.'
+	},
+	{
+		title: 'Crazed Rampage',
+		brutality: 4,
+		associations: [atk.meleeFineBlades],
+		flavor: 'You bury your blade deep into the enemy',
+		effect: 'You roll damage as normal. You may roll op to 5 d20 extra. If the damage is a multiple of 6 (6, 12, 18), you take the damage, otherwise, the enemy does.'
+	},
+	{
+		title: 'Supersonic',
+		brutality: 5,
+		associations: [atk.meleeFineBlades],
+		flavor: 'Your speed knows no limits.',
+		effect: 'You roll full damage twice and add up the results. Until the end of the encounter, you gain one extra attack (see fighter).'
+	},
+	{
+		title: 'Slice-through',
+		brutality: 4,
+		associations: [atk.meleeFineBlades],
+		flavor: 'You carve through your opponent, and straight into the next.',
+		effect: 'You roll full damage twice and add up the results. If there is an enemy adjacent to your target and within your reach, make one basic melee attack against it as a free action.'
+	},
+	{
+		title: 'Headbutt',
+		brutality: 4,
+		associations: [atk.meleeMediumBlades],
+		flavor: 'You throw in a quick headbutt while you\'re at it!',
+		effect: '<b>You deal damage as normal.</b> You deal additional damage equal to your strength score.'
+	},
+	{
+		title: 'Parry prep',
+		brutality: 4,
+		associations: [atk.meleeMediumBlades],
+		flavor: 'You make a big swing, and prepare to block an incoming attack.',
+		effect: 'You roll full damage twice and add up the results. Until the end of your next turn, the next attack that hits you has its damage reduced by the damage you just rolled.'
+	},
+	{
+		title: 'Splatter!',
+		brutality: 4,
+		associations: [atk.meleeMediumBlades],
+		flavor: 'You make a big swing, splattering the blood of your enemy all over the other enemies.',
+		effect: 'You roll full damage twice and add up the results. All other enemies within 20ft of the target get splattered in blood and must make a DC16 wisdom saving throw or become afraid of you until the end of the encounter.'
+	},
+	{
+		title: 'Send them flying',
+		brutality: 5,
+		associations: [atk.meleeHeavyWeapons],
+		flavor: 'You swing your weapon upwards from below, making a beautiful arc, lifting up your target and supplexing them behind you.',
+		effect: 'You roll full damage twice and add up the results. The enemy takes 1d6 fall damage and is thus knocked prone. This movement may provoke attacks of opportunity.'
+	},
+	{
+		title: 'Break a leg!',
+		brutality: 4,
+		associations: [atk.meleeHeavyWeapons],
+		flavor: 'You swing at the enemy\'s legs with all your strength, making them collapse.',
+		effect: 'You roll full damage twice and add up the results. The enemy\'s leg is seriously injured. It is knocked prone and cannot walk for 1d4 days.'
+	},
+	{
+		title: 'Twirlwind',
+		brutality: 4,
+		associations: [atk.meleeLongWeapons],
+		flavor: 'You rotate your weapon around your body, slashing and stomping the enemy.',
+		effect: 'You roll full damage twice and add up the results. The target is confused until the end of its next turn. It chooses the target for its next attack randomly.'
+	},
+	{
+		title: 'Potent application',
+		brutality: 4,
+		associations: [dmg.poison],
+		flavor: 'You apply the poison directly to the target\'s veins.',
+		effect: 'You roll full damage twice and add up the results. Double either the effect or the duration of the poison.'
 	}
 ];
